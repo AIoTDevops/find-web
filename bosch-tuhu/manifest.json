@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Bosch Tuhu",
+    "version": "0.1",
+    "description": "This extension reduces the opacity of Youtube video player controls for better visibility of the content.",
+    "background": {
+        "scripts": ["backgroundScript.js"]
+    },
+    "permissions": ["activeTab", "downloads"],
+    "content_scripts": [{
+        "matches": ["https://item.tuhu.cn/*"],
+        "js": ["contentScript.js"]
+    }],
+    "browser_action": {
+        "default_icon": {
+            "32": "icon.png"
+        }
+    }
+}
